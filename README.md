@@ -1,8 +1,8 @@
 # Event Bus
 
-[![Build Status](https://travis-ci.org/cucumber/event-bus.svg?branch=master)](https://travis-ci.org/cucumber/event-bus)
-[![Code Climate](https://codeclimate.com/github/cucumber/event-bus.svg)](https://codeclimate.com/github/cucumber/event-bus)
-[![Coverage Status](https://coveralls.io/repos/cucumber/event-bus/badge.svg?branch=master)](https://coveralls.io/r/cucumber/event-bus?branch=master)
+[![Build Status](https://travis-ci.org/dg-ratiodata/event-bus.svg?branch=master)](https://travis-ci.org/dg-ratiodata/event-bus)
+[![Code Climate](https://codeclimate.com/github/dg-ratiodata/event-bus.svg)](https://codeclimate.com/github/dg-ratiodata/event-bus)
+[![Coverage Status](https://coveralls.io/repos/dg-ratiodata/event-bus/badge.svg?branch=master)](https://coveralls.io/r/dg-ratiodata/event-bus?branch=master)
 [![Gem Version](https://badge.fury.io/rb/event-bus.svg)](http://badge.fury.io/rb/proxy_pac_rb)
 [![Downloads](http://img.shields.io/gem/dt/event-bus.svg?style=flat)](http://rubygems.org/gems/proxy_pac_rb)
 
@@ -27,7 +27,7 @@ Or install it yourself as:
 
 ## Usage
 
-Please have a look at [features/bus.feature](https://github.com/cucumber/event-bus/blob/master/features/bus.feature) for an
+Please have a look at [features/bus.feature](https:///github.com/dg-ratiodata/event-bus/blob/master/features/bus.feature) for an
 example application.
 
 ## Development
@@ -41,7 +41,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-https://github.com/cucumber/event-bus. This project is intended to be a
+https:///github.com/dg-ratiodata/event-bus. This project is intended to be a
 safe, welcoming space for collaboration, and contributors are expected to
 adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
