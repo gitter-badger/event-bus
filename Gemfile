@@ -44,8 +44,7 @@ group :development, :test do
   gem 'simplecov', '~> 0.10'
 
   # Test api
-  gem 'rspec', '~> 3.4'
-  gem 'fuubar', '~> 2.0.0'
+  gem 'coveralls', '~> 0.8.10', require: false
 
   # using platform for this make bundler complain about the same gem given
   # twice

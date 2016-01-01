@@ -7,6 +7,9 @@ namespace :gem do
   require 'bundler/gem_tasks'
 end
 
+require 'coveralls/rake/task'
+Coveralls::RakeTask.new
+
 require 'cucumber/rake/task'
 
 Cucumber::Rake::Task.new do |t|
@@ -53,6 +56,6 @@ else
 end
 
 desc 'Run tests, both RSpec and Cucumber'
-task :test => ['travis:lint', :rubocop, :spec, :cucumber, :cucumber_wip]
+task :test => ['travis:lint', :rubocop, :spec, :cucumber, :cucumber_wip, 'coveralls:push']
 
 task :default => :test
