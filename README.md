@@ -27,7 +27,7 @@ Or install it yourself as:
 
 ## Usage
 
-Please have a look at [features/bus.feature](https://github.com/cucumber/event-bus/blob/master/features/bus.feature) for an
+Please have a look at [features/bus.feature](https:///github.com/dg-ratiodata/event-bus/blob/master/features/bus.feature) for an
 example application.
 
 ## Development
@@ -41,7 +41,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-https://github.com/cucumber/event-bus. This project is intended to be a
+https:///github.com/dg-ratiodata/event-bus. This project is intended to be a
 safe, welcoming space for collaboration, and contributors are expected to
 adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
