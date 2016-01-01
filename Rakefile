@@ -62,7 +62,6 @@ else
   Coveralls::RakeTask.new
 end
 
-
 desc 'Run tests, both RSpec and Cucumber'
 task :test => ['travis:lint', :rubocop, :spec, :cucumber, :cucumber_wip, 'coveralls:push']
 
