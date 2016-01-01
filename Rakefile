@@ -7,9 +7,6 @@ namespace :gem do
   require 'bundler/gem_tasks'
 end
 
-require 'coveralls/rake/task'
-Coveralls::RakeTask.new
-
 require 'cucumber/rake/task'
 
 Cucumber::Rake::Task.new do |t|
@@ -54,6 +51,17 @@ else
   require 'rubocop/rake_task'
   RuboCop::RakeTask.new
 end
+
+if RUBY_VERSION < '1.9.3'
+  namespace :coveralls do
+    desc 'Stub task to make rake happy'
+    task(:push) {}
+  end
+else
+  require 'coveralls/rake/task'
+  Coveralls::RakeTask.new
+end
+
 
 desc 'Run tests, both RSpec and Cucumber'
 task :test => ['travis:lint', :rubocop, :spec, :cucumber, :cucumber_wip, 'coveralls:push']
