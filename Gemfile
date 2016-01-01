@@ -46,7 +46,6 @@ group :development, :test do
   # Test api
   gem 'rspec', '~> 3.4', :require => false
   gem 'fuubar', '~> 2.0.0', :require => false
-  gem 'coveralls', '~> 0.8.10', :require => false
 
   # using platform for this make bundler complain about the same gem given
   # twice
@@ -71,6 +70,7 @@ group :development, :test do
   if RUBY_VERSION >= '1.9.3'
     # Upload documentation
     gem 'relish', '~> 0.7.1', :require => false
+    gem 'coveralls', '~> 0.8.10', :require => false
   end
 
   gem 'minitest', '~> 5.8.0', :require => false
