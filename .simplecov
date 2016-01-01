@@ -1,4 +1,8 @@
-require 'coveralls'
+begin
+  require 'coveralls'
+rescue LoadError
+  puts 'Failed to load coveralls. That might happen on ruby < 1.9.3'
+end
 
 SimpleCov.start do
   add_filter "/features/"
