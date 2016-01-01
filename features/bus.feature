@@ -1,4 +1,3 @@
-@announce
 Feature: Subscribe To Bus
   Background:
     Given I use a fixture named "simple_app"
