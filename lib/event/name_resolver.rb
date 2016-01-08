@@ -58,55 +58,41 @@ module Event
     end
 
     # @private
-    # Base Resolver
-    class BaseResolver
-      protected
-
-      attr_reader :default_namespace
-
-      public
-
-      def initialize(default_namespace)
-        @default_namespace = default_namespace
-      end
-    end
-
-    # @private
     # Convert a class in to an event class
-    class ClassResolver < BaseResolver
+    class ClassResolver
       def self.match?(event_id)
         event_id.is_a? Class
       end
 
-      def transform(event_id)
+      def transform(_, event_id)
         event_id
       end
     end
 
     # @private
     # Convert a string in to an event class
-    class StringResolver < BaseResolver
+    class StringResolver
       include ResolveHelpers
 
       def self.match?(event_id)
         event_id.is_a? String
       end
 
-      def transform(event_id)
+      def transform(_, event_id)
         constantize(event_id)
       end
     end
 
     # @private
     # Convert a symbol in to an event class
-    class SymbolResolver < BaseResolver
+    class SymbolResolver
       include ResolveHelpers
 
       def self.match?(event_id)
         event_id.is_a? Symbol
       end
 
-      def transform(event_id)
+      def transform(default_namespace, event_id)
         constantize("#{default_namespace}::#{camel_case(event_id)}")
       end
     end
@@ -115,7 +101,7 @@ module Event
     # Default failing resolver
     #
     # This comes into play if the user passes an invalid event type
-    class FailingResolver < BaseResolver
+    class FailingResolver
       def self.match?(event_id)
         fail ArgumentError, %(Input type of event_id "#{event_id}" is invalid.)
       end
@@ -138,7 +124,7 @@ module Event
     end
 
     def transform(event_id)
-      resolvers.find { |r| r.match? event_id }.new(default_namespace).transform(event_id)
+      resolvers.find { |r| r.match? event_id }.new.transform(default_namespace, event_id)
     rescue => e
       raise EventNameResolveError, %(Transforming "#{event_id}" into an event class failed: #{e.message}.\n\n#{e.backtrace.join("\n")})
     end
