@@ -26,7 +26,7 @@ group :development, :test do
     gem 'pry', '~>0.9.12', :require => false
   end
 
-  gem 'aruba', '~>0.11.2', :require => false
+  gem 'aruba', '~>0.12.0', :require => false
 
   # Run development tasks
   gem 'rake', '~> 10.4.2', :require => false
