@@ -59,5 +59,10 @@ describe Event::NameResolver do
         it { expect(resolved_name).to eq MyLib::Events::MyEvent }
       end
     end
+
+    context 'when invalid' do
+      let(:original_name) { 1 }
+      it { expect { resolved_name }.to raise_error Event::EventNameResolveError, /Transforming "1" into an event class failed: Input type of event_id "1"/ }
+    end
   end
 end
