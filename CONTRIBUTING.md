@@ -17,7 +17,7 @@ Here are some ways *you* can contribute:
 * by closing [issues][]
 * by reviewing patches
 
-[issues]: https:///github.com/dg-ratiodata/event-bus/issues
+[issues]: https://github.com/fedux-org/event-bus/issues
 
 ## Submitting an Issue
 
