@@ -1,5 +1,7 @@
 # Event Bus
 
+[![Join the chat at https://gitter.im/fedux-org/event-bus](https://badges.gitter.im/fedux-org/event-bus.svg)](https://gitter.im/fedux-org/event-bus?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/fedux-org/event-bus.svg?branch=master)](https://travis-ci.org/fedux-org/event-bus)
 [![Code Climate](https://codeclimate.com/github/fedux-org/event-bus.svg)](https://codeclimate.com/github/fedux-org/event-bus)
 [![Coverage Status](https://coveralls.io/repos/fedux-org/event-bus/badge.svg?branch=master)](https://coveralls.io/r/fedux-org/event-bus?branch=master)
